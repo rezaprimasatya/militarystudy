@@ -1,5 +1,6 @@
-Nama : Reza Primasatya
-Email : reza.primasatya@karmagroup.com
-Phone : 08119503646
-Jabatan : Tukang Sapu
-hesoyam
+#----------------***--------------------#
+|Nama : Reza primasatya 				|
+|Email : reza.primasatya@karmagroup.com |
+|Phone : 08119503646					|
+|Jabatan : Tukang Sapu					|
+#----------------***--------------------#
