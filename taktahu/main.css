@@ -1,0 +1,68 @@
+.container{
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+.gallery-viewport {
+    float: left;
+    position: relative;
+    margin: 5px;
+}
+
+.gallery-viewport img{
+	width: 250px;
+	height:300px;
+}
+
+.img-title{
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	background-color: #AAA;
+	color: white;	
+	opacity: 0;
+}
+
+.img-title p{
+	padding: 5px;	
+}
+
+.gallery-viewport:hover .img-title,
+.shower-img:hover .img-title{	
+	opacity: 1;
+	transition: opacity 0.3s;
+}
+
+.modal-view{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(13,13,13,0.25);
+	width: 100%;
+	height: 100%;
+}
+
+.modal-view .content{
+	width: 80%;
+	display: block;
+	background-color: white;
+	margin: 25px auto;
+	overflow: auto;
+}
+
+.modal-view .content .shower-img{
+	float: left;
+	width: 75%;
+	height: 100%;
+	position: relative;
+}
+
+.modal-view .content .shower-img img{
+	width: 100%;
+}
+
+.modal-view .content .caption-section{
+	width: 23%;
+	float: left;
+	padding: 15px;
+}
