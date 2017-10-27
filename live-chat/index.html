@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>live chat</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<script type="text/javascript" src="main.js"></script>
+    <title>live chat</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>
 </head>
+
 <body>
-	<nav class="navigation">
-		<div class="brand">
-			
-		</div>
-	</nav>
-	<div class="container">
-		<h3 id="greeting-message">
+    <nav class="navigation">
+        <div class="brand">
+        </div>
+    </nav>
+    <div class="container">
+        <h3 id="greeting-message">
 			Hallo Stranger, To serve you better, please fill the form bellow
 		</h3>
-		<form action="chat.html">
-			
-		</form>
-	</div>
+        <div class="form">
+            <form action="chat.html" id="form-regis">
+                <div class="input-group">
+                    <label for="name">Name* :</label>
+                    <input type="text" name="name" id="name" class="input-user" required="true">
+                </div>
+                <div class="input-group">
+                    <label for="name">Email* :</label>
+                    <input type="text" name="email" id="email" class="input-user" required="true">
+                </div>
+                <div class="input-group">
+                    <label for="name">Select Department :</label>
+                    <select class="input-user" name="department">
+                        <option value="" selected="true" disabled="true">--select--</option>
+                        <option value="Karma club">Karmaclub</option>
+                        <option value="Membership">Membership</option>
+                        <option value="Reservation">Reservation</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

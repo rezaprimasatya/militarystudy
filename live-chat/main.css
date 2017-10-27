@@ -1,6 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+#greeting-message{
+	text-align: center;
+}
 .container{
 	position: relative;
 	display: block;
 	margin-left: 15px;
 	margin-right: 15px;
+}
+
+.form{
+	margin: auto;
+	width: 50%;
+}
+
+.input-group{
+	margin-bottom: 10px
+}
+
+.input-group .input-user{
+	display: block;
+	width: 100%;
+	padding: 10px;
 }
