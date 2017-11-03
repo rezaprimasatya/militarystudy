@@ -12,8 +12,8 @@
 		</section>
 		<div class="row">
 			<div class="input-grouping">
-				<input type="text" name="Search" placeholder="search image here" onkeyup="doSearch(this)">
-				<button type="button" name="search">Find</button>
+				<input type="text" name="Search" placeholder="search image here" onkeyup="doSearch(this)" id="searchbar">
+				<button type="button" name="search" onclick="doSearch(document.getElementById('searchbar'))">Find</button>
 			</div>			
 		</div>
 		<div class="row" id="gallery-viewport">					

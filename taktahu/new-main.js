@@ -18,8 +18,8 @@ var stackImage = [
 		]
 	},
 	{
-		title: "Karma Mayura Accommodation Balcony",
-		url: "https://karmagroup.com/wp-content/gallery/karma-mayura/3._Karma_Mayura_Accommodation_Balcony.jpg",
+		title: "Royal Palms Spa",
+		url: "https://karmagroup.com/wp-content/gallery/karma-royal-palms/Royal_Palms_Spa2.jpg",
 		caption: "asdasdasdqweqweqsdasdqewqweasdqwe",
 		tags: [
 			'tag1',
@@ -111,7 +111,7 @@ let renderImage = function(arrayImage, callback){
 }
 
 renderImage(stackImage, function(card){
-	console.log(card)
+	// console.log(card)
 	let galleryViewport = document.getElementById("gallery-viewport")	
 	galleryViewport.innerHTML = card
 })
