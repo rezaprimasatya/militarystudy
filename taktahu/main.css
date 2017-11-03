@@ -132,3 +132,25 @@
     padding: 10px;
     text-align: justify;
 }
+
+.nav{
+	position: fixed;
+	top: 50%;
+	background-color: transparent;
+	color: white;
+	border: 1.5px solid #AAA;
+	padding: 15px !important;
+	cursor: pointer;
+}
+.nav:hover{
+	background-color: #AAA;
+	color: black;
+	transition: 0.8s all ease;
+}
+.nav-left{
+	left: -2px;
+}
+
+.nav-right{
+	right: 0;
+}

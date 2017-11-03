@@ -90,12 +90,38 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	console.log(stackImage)
+	let pointer = 0
 	$('.img-card').on('click', function(e){
 		e.preventDefault()
 		pointer = $(this).data('pointer')
 		$('#viewport-img').attr('src',stackImage[pointer].url)
 		$('#viewport-title').html(stackImage[pointer].title)
 		$('#viewport-caption').html(stackImage[pointer].caption)
-		console.log($(this).data('pointer'))
+		// console.log($(this).data('pointer'))
+	})
+
+	$('#nav-left').on('click', function(e){
+		e.preventDefault()
+		if (pointer == 0) {
+			pointer = stackImage.length -1
+		}
+		else
+			pointer--
+		$('#viewport-img').attr('src',stackImage[pointer].url)
+		$('#viewport-title').html(stackImage[pointer].title)
+		$('#viewport-caption').html(stackImage[pointer].caption)
+
+	})
+
+	$('#nav-right').on('click', function(e){
+		e.preventDefault()
+		if (pointer == stackImage.length - 1 ) {
+			pointer = 0
+		}
+		else
+			pointer++
+		$('#viewport-img').attr('src',stackImage[pointer].url)
+		$('#viewport-title').html(stackImage[pointer].title)
+		$('#viewport-caption').html(stackImage[pointer].caption)
 	})
 })
