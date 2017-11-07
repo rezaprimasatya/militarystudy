@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="Login.css" type="text/css" rel="stylesheet">
+<!--link href="Login.css" type="text/css" rel="stylesheet"-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--style>
 form {
     border: 3px solid #f1f1f1;
@@ -27,22 +31,33 @@ background: #f4f4f4;
 <title>Log In</title>
 </head>
 <body>
-    <div class="loginForm" align="center">
-      <form action = "#" method="post">
-            <p>log In To Your Account</p>
-            <h5>email or mobile number</h5>
-            <input type="text" name="username"/><br>
-            <h5>password</h5>
-            <input type="password" name="password"/><br><br>
-            <input type="submit" name="Log In" value="Log In"> 
-            No Account Yet?
-            Register
-      </form>
-    <div>
-      <input type="submit" name="facebook" value="Facebook">
-      <input type="submit" name="google" value="Google">
-    </div>
+	<div>
+    	<div class="loginForm" align="center">
+            <form action = "#" method="post">
+                <p>log In To Your Account</p>
+                <div>email or mobile number</div>
+                <input type="text" name="username"/><br>
+                <div>
+                	<p class="alignLeft">password</p>
+                    <p class="alignRight">forgot password</p>
+                </div>
+                <input type="password" name="password"/><br><br>
+                <input type="submit" name="Log In" value="Log In"> 
+                No Account Yet?
+                Register
+            </form>
+            <div class="btn-group-vertical">
+              <input type="submit" name="facebook" value="Facebook" class="btn btn-primary">
+              <input type="submit" name="google" value="Google" class="btn btn-primary">
+            </div>
+    	</div>
+            <!--div class="share" align="center">
+              <a href="#">SHARE</a>
+              <a href="#">FAVORITE</a>
+              <a href="#">READ</a>
+            </div-->
     </div>
  	
+    
 </body>
 </html>

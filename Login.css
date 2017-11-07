@@ -1,24 +1,53 @@
-/*@charset "utf-8";*/
-/* CSS Document */
-
-/* Full-width inputs */
 form {
     border: 3px solid #f1f1f1;
 }
 input[type=text], input[type=password] {
-    width: 40%;
-	height: 1px;
-    padding: 12px 20px;
-    margin: 0px 0;
+    width: 75%;
+	height: 0px;
+    padding: 12px 10px;
     display: inline-block;
     border: 0px thin #f0f0f0;
     box-sizing: border-box;
 }
 .loginForm{
-background: #f4f4f4;
-  border: 1px solid #42464b;
-  border-radius: 3px;
-  height: 350px;
+  background: #f4f4f4;
+  border: 1px solid;
+  border-color:#999;
+  border-radius: 10px;
+  height: 280px;
   margin: 10px auto 0;
-  width: 280px;
+  width: 250px;
 }
+.alignLeft{
+	float: left;
+	margin-left: 20px;
+}
+.alignRight{
+	float: right;
+	margin-right: 20px;
+}
+
+/*.share {
+  --border: 1px solid LightGrey;
+  border: 1.25px dashed #f4f4f4;
+  padding: 10px 0px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.share a {
+  background: red;
+  border: 1px solid red;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  margin: -1px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 9px;
+}
+.share a:hover {
+  background: white;
+  border: 1px solid red;
+  color: red;
+}*/
