@@ -1,0 +1,10 @@
+.grid-center{
+    float: none;
+    margin: 0 auto 0 auto;
+}
+.add-top {
+    padding-top: 10px;
+}
+.add-top2{
+    margin-top: 10px;
+}
