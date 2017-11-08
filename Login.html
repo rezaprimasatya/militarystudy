@@ -1,61 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <link href="Login.css" type="text/css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--style>
-form {
-    border: 3px solid #f1f1f1;
-}
-input[type=text], input[type=password] {
-    width: 40%;
-	height: 1px;
-    padding: 12px 20px;
-    margin: 0px 0;
-    display: inline-block;
-    border: 0px thin #f0f0f0;
-    box-sizing: border-box;
-}
-.loginForm{
-background: #f4f4f4;
-  border: 1px solid #42464b;
-  border-radius: 3px;
-  height: 350px;
-  margin: 10px auto 0;
-  width: 280px;
-}
-</style-->
+
 <title>Log In</title>
 </head>
 <body>
 	<div>
     	<div class="loginForm" align="center">
             <form action = "#" method="post">
-                <p id="logTitle">log In To Your Account</p><br>
+                <p id="logTitle">Log in to your account</p><br>
                 <div class="alignLeft">
-                    email or mobile number
+                    Email or mobile number
                 </div>
                 <input type="text" name="username"/><br>
                 <div>
                     <br>
-                	<p class="alignLeft">password</p>
-                    <p class="alignRight">forgot password</p>
+                	<p class="alignLeft" style="margin-bottom:0;">Password</p>
+                    <p class="alignRight" style="margin-bottom:0;">Forgot Password</p>
                 </div>
-                    <input type="password" name="password"/><br><br>
+                    <input type="password" name="password" style="margin-top:0px;"/><br><br>
                 <div>
                     <input type="submit" name="Log In" value="Log In"> 
-                    No Account Yet?
-                    <span id="spanReg" style="color:blue;">Register</span>
+                    <h6>No Account Yet?</h6>
+                    <a href="#" class="alignRightReg"><span id="spanReg" style="color:rgb(17, 116, 177);">Register</span></a>
                 </div>
             </form>
             
             <form>
-                <div class="buttonBottom">
-                    <input type="submit" name="facebook" value="Facebook" class="btn btn-primary">
-                    <input type="submit" name="google" value="Google" class="btn btn-primary">
+                <p class="buttonBottom" style="margin-bottom:8px;">Or log in with:</p>
+                <div style="margin-top:0px;">
+                    <input type="submit" name="facebook" value="Facebook" class="btn btn-primary" style="margin-left:45px;margin-right:0px;">
+                    <input type="submit" name="google" value="Google" class="btn btn-primary" style="margin-right:35px;margin-left:3px;">
                 </div>
             </form>
     	</div>
