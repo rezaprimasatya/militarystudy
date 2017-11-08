@@ -92,26 +92,52 @@ let doSearch = function(element){
 	})
 }
 
-let renderImage = function(arrayImage, callback){	
-	let card = ``
-	arrayImage.map(function(image, index){
-		var cardTemplate = `
-		<a class="col-4 img-card" href="#" data-img="${image.url}" data-toggle="modal" data-target="#exampleModal" data-pointer="${index}">
-            <div class="card-wrapper">
-                <img src="${image.url}">
-                <div class="img-title">
-                    ${image.title.substring(0,25)}...
-                </div>
-            </div>
-        </a>
-        `
-        card += cardTemplate        
+// let renderImage = function(arrayImage, callback){	
+// 	let card = ``
+// 	arrayImage.map(function(image, index){
+// 		var cardTemplate = `
+// 		<a class="col-4 img-card" href="#" data-img="${image.url}" data-toggle="modal" data-target="#exampleModal" data-pointer="${index}">
+//             <div class="card-wrapper">
+//                 <img src="${image.url}">
+//                 <div class="img-title">
+//                     ${image.title.substring(0,25)}...
+//                 </div>
+//             </div>
+//         </a>
+//         `
+//         card += cardTemplate        
+// 	})
+// 	callback(card)
+// }
+
+// renderImage(stackImage, function(card){
+// 	// console.log(card)
+// 	let galleryViewport = document.getElementById("gallery-viewport")	
+// 	galleryViewport.innerHTML = card
+// })
+
+let initImageObject = function(arrayImage, callback){
+	arrayImage = arrayImage.map(function(image, index){
+		var img = new ImageObject(image.title, image.url, image.caption, image.tags)
+		stackImage[index] = img
 	})
-	callback(card)
+	callback(stackImage)
 }
 
-renderImage(stackImage, function(card){
-	// console.log(card)
-	let galleryViewport = document.getElementById("gallery-viewport")	
-	galleryViewport.innerHTML = card
+initImageObject(stackImage, function(images){
+	let constructCard = new Promise(function(resolve, reject){
+		let allCard = ``
+		images.forEach(function(image, index){
+			allCard += image.render(index)
+		})
+		resolve(allCard)
+	})
+	.then(res => {
+		let galleryViewport = document.getElementById("gallery-viewport")	
+		galleryViewport.innerHTML = res
+	})
+	.catch(err => {
+		console.log(err)
+	})
+
 })
