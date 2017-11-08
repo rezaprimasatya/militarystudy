@@ -62,7 +62,12 @@ input[type=submit]{
 h6{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-bottom: 0px;
-   
+}
+#bottomForm{
+    background-color: rgb(247, 247, 247);
+    height: 78px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 /*.share {
