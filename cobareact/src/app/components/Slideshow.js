@@ -10,7 +10,12 @@ class Slideshow extends Component{
 			captions: props.captions,
 			pointer: 0
 		}
+		this.changeImage = this.changeImage.bind(this)
 
+	}
+
+	changeImage(index){
+		console.log(index)
 	}
 	render(){
 		return(
@@ -31,10 +36,10 @@ class Slideshow extends Component{
 					)
 				})}
 				<div className="dots-container">
-				{this.state.images.map(image => {
+				{this.state.images.map((image, index) => {
 					return(
-						<div>
-							<span className="dot"></span>
+						<div key={index}>
+							<span className="dot" onClick={this.changeImage(index)}></span>
 						</div>
 					)
 				})}
