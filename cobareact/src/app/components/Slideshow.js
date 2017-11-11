@@ -12,12 +12,28 @@ class Slideshow extends Component{
 			pointer: 0
 		}
 		this.changeImage = this.changeImage.bind(this)
+		this.autoUpdateImage  =this.autoUpdateImage.bind(this)
+	}
 
+	componentDidMount() {
+	  this.autoUpdateImage();
 	}
 
 	changeImage(index){
 		this.setState({activeIndex: index})
 		console.log(index)
+	}
+	autoUpdateImage(){		
+		setTimeout(function() {
+			let currentIndex = this.state.activeIndex 
+			if (currentIndex == this.state.images.length) {
+				currentIndex = 0
+			}
+			else
+				currentIndex++
+			console.log(currentIndex)
+			this.setState({activeIndex: currentIndex})
+		}.bind(this), 3000);
 	}
 	render(){
 		return(
