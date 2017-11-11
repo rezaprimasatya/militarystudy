@@ -5,6 +5,7 @@ class Slideshow extends Component{
 	constructor(props){
 		super(props)
 		this.state = {
+			activeIndex: 0,
 			images: props.images,
 			captionsTitle: props.titles,
 			captions: props.captions,
@@ -15,6 +16,7 @@ class Slideshow extends Component{
 	}
 
 	changeImage(index){
+		this.setState({activeIndex: index})
 		console.log(index)
 	}
 	render(){
@@ -22,7 +24,7 @@ class Slideshow extends Component{
 			<div className="slideshow-container">
 				{this.state.images.map((image, index) => {
 					return(
-						<div className="slide fade" key={index}>
+						<div className={this.state.activeIndex == index?'slide fade active':'slide fade'} key={index}>
 							<img src={image} />
 							<div className="caption-side">
 								<div className="caption-title">
@@ -39,7 +41,7 @@ class Slideshow extends Component{
 				{this.state.images.map((image, index) => {
 					return(
 						<div key={index}>
-							<span className="dot" onClick={this.changeImage(index)}></span>
+							<span className="dot" onClick={e => this.changeImage(index)}></span>
 						</div>
 					)
 				})}
