@@ -6,6 +6,7 @@ import image3 from './assets/images/ss/ss3.jpg'
 import './assets/css/body.css'
 import Greetings from './components/Greetings'
 import TermsAndConditions from './components/TermsAndConditions'
+import Footer from './components/Footer'
 
 class App extends Component{
   render(){
@@ -92,6 +93,7 @@ class App extends Component{
 			]
 		}		
 		/>
+		<Footer contact="UK: 0800 949 6415 Direct Dial: +44 345 193 5220"/>
       </div>
     )
   }
