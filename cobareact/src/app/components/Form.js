@@ -8,7 +8,7 @@ class Form extends Component{
 	render(){
 		return(
 			<div className="form">
-				<form>
+				<form >
 
 				</form>
 			</div>
