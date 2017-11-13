@@ -1,0 +1,15 @@
+.terms-and-conditions{
+	color: #8d7249;
+	margin: 10px auto;
+	width: 1200px;
+}
+.terms-and-conditions .title{
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+}
+
+.terms-and-conditions .terms{
+	font-size: 16px;
+	line-height: 22px;
+}
