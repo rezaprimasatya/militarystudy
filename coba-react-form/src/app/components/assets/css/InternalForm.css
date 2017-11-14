@@ -2,3 +2,29 @@
 	background-color: #FFF;
 	padding: 15px;
 }
+
+.form-container__button-submit{
+	display: inherit !important;
+	margin: auto !important;
+	background-color: transparent !important;
+	color: #dba849 !important;
+	border: 1.5px solid #dba849 !important;
+	padding: 20px !important;
+}
+
+.form-container__button-submit:hover{
+	background-color: #dba849 !important;
+	color: #FFF !important;
+	transition: all 0.5s ease !important;
+}
+
+@media only screen and (max-width: 767px){
+	.form-container{
+		background-color: #FFF;
+		padding: 15px 0;
+	}
+	body .ui.form{
+		margin-top: 100px;
+	}
+
+}

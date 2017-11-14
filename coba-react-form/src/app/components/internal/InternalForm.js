@@ -1,10 +1,15 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom'
-import {Form, Container, Dropdown} from 'semantic-ui-react'
+import {Form, Container, Dropdown, Button, Checkbox, Input, Radio, Select, TextArea} from 'semantic-ui-react'
 import Location from './LocationAPI'
 import Country from './CountryAPI'
 import CountryCode from './CountryCodeAPI'
 import '../assets/css/InternalForm.css'
+
+const optionsKarmaGroup = [
+  { key: 'y', text: 'Yes', value: 'yes' },
+  { key: 'n', text: 'No', value: 'no' },
+]
 
 class InternalForm extends Component{
 	constructor(props){
@@ -17,10 +22,12 @@ class InternalForm extends Component{
 		document.getElementById('location').value = data.value
 		console.log(document.getElementById('location').value)		
 	}
+
 	handleCountry(event, data){
 		document.getElementById('country').value = data.value
 		console.log(document.getElementById('country').value)		
 	}
+
 	render(){
 		return(
 			<Container className='form-container'>
@@ -36,30 +43,34 @@ class InternalForm extends Component{
 						  onChange={this.handleLocation}
 						  />	
 					  <input type="text" id="location" hidden={true} />
-				    </Form.Field>				    				    
+				    </Form.Field>		
+
 				    <Form.Group widths='equal'>
 			          <Form.Input label='First name' placeholder='First name' />
 			          <Form.Input label='Last name' placeholder='Last name' />
 			          <Form.Input label='Karma Staff Name' placeholder='Karma Staff Name' />
 			        </Form.Group>		
+
 			        <Form.TextArea name='address' label='Address' placeholder='Address...' />
+
 			        <Form.Group widths='equal'>
-			          <Form.Field>
-				      <label>Country: </label>
-				      <Dropdown 
-				      	placeholder='Select a Country' 
-				      	fluid 
-				      	search 
-				      	selection 
-				      	options={Country.all()}
-						  onChange={this.handleCountry}
-						  />	
-					  <input type="text" id="country" hidden={true} />
-				    </Form.Field>
+						<Form.Field>
+							<label>Country: </label>
+							<Dropdown 
+								placeholder='Select a Country' 
+								fluid 
+								search 
+								selection 
+								options={Country.all()}
+								onChange={this.handleCountry}
+							/>	
+							<input type="text" id="country" hidden={true} />
+						</Form.Field>
 						<Form.Input name='state' label='State' placeholder='State' />
 						<Form.Input name='city' label='City' placeholder='City' />
 						<Form.Input name='postcode' label='Postcode' placeholder='Postcode' />
 			        </Form.Group>	
+
 					<Form.Group>
 						<Form.Field width='4'>
 							<label>Mobile Country Code: </label>
@@ -76,7 +87,8 @@ class InternalForm extends Component{
 						<Form.Field width="12">
 							<Form.Input name='mobileNummber' label='Mobile Number' placeholder='Mobile Number' />					
 						</Form.Field>
-					</Form.Group>	
+					</Form.Group>
+
 					<Form.Group>
 						<Form.Field width='4'>
 							<label>Phone Country Code: </label>
@@ -94,6 +106,24 @@ class InternalForm extends Component{
 							<Form.Input name='mobileNummber' label='Home Phone Number' placeholder='Home Phone Number' />					
 						</Form.Field>
 					</Form.Group>		    
+
+					<Form.Input name='email' label='Email' placeholder='Email' type="email"/>
+
+					<Form.Input name='date' label='Date of Birth' placeholder='dd/mm/yyyy' type="date"/>
+
+					<Form.Group widths='equal'>				
+						<Form.Field control={Select} label='Are You a Karma Group Member?' options={optionsKarmaGroup} placeholder='Select' />
+						<Form.Field control={Input} label='Odyssey Membership Number' placeholder='Odyssey Membership Number' />						
+					</Form.Group>
+
+					<Form.Field
+				      control={Checkbox}
+				      label={{ children: 'I agree to receive email communications & information from the Karma Club team (* Karma Club Membership Fee = $499)' }}
+				    />
+
+				    <p>* Karma Club Membership Fee = $499.</p>
+
+				    <Button className="form-container__button-submit">Submit</Button>
 				</Form>
 			</Container>
 		)
