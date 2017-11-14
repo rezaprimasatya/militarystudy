@@ -1,6 +1,9 @@
 + form {
     border: 0px solid #f1f1f1;
 }
+/*div{
+    border: 1px solid red;
+}*/
 input[type=text], input[type=password] {
     width: 75%;
 	height: 0px;
@@ -48,14 +51,14 @@ input[type=submit]{
     margin-left: -30px;
 }
 .buttonBottom{
-    margin-top: 35px;
+    margin-top: 43px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: gray;
     font-size: 11px; 
 }
 .alignRightReg{
 	float: right;
-    margin: -10px 30px 20px 0px;
+    margin: 0px 30px 20px 0px;
     font-size: 11px;
     font-weight: bold;
 }
@@ -69,28 +72,28 @@ h6{
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
+.pesan{
+    display: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6px;
+    font-weight: bold;  
+    color: red;
+    float: right;
+    margin-right: 30px;
+}
+.pesan.show{
+    display: block;
+}
 
-/*.share {
-  --border: 1px solid LightGrey;
-  border: 1.25px dashed #f4f4f4;
-  padding: 10px 0px;
-  position: relative;
-  text-align: center;
-  width: 100%;
+.pesanPass{
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6px;
+    font-weight: bold;  
+    color: red;
+    float: right;
+    margin-right: 30px;
 }
-.share a {
-  background: red;
-  border: 1px solid red;
-  border-radius: 8px;
-  color: white;
-  display: inline-block;
-  margin: -1px;
-  padding: 5px;
-  text-decoration: none;
-  font-size: 9px;
+.pesanPass.show{
+    display: block;
 }
-.share a:hover {
-  background: white;
-  border: 1px solid red;
-  color: red;
-}*/

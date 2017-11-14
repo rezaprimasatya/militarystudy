@@ -2,6 +2,7 @@
 <html>
 <head>
 
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,21 +13,23 @@
 <body>        
 	<div>
     	<div class="loginForm" align="center">
-            <form action = "#" method="post">
+            <form action = "#" method="post" onsubmit="return check(this)">
                 <p id="logTitle">Log in to your account</p><br>
                 <div class="alignLeft">
                     Email or mobile number
                 </div>
                 <input id="inputEmailMob" type="text" placeholder="enter email or mobile number" name="username"/><br>
+                <p id="pesanUsername" class="pesan"></p>
                 <div>
                     <br>
                 	<p class="alignLeft" style="margin-bottom:0;">Password</p>
                     <p class="alignRight" style="margin-bottom:0;"><a href="#">Forgot Password</a></p>
                 </div>
-                    <input type="password" placeholder="enter password" name="password" style="margin-top:0px;"/><br><br>
-                <div>
-                    <input id="tombolLogIn" type="submit" name="Log In" value="Log In" class="btn btn-warning"> 
-                    <h6>No Account Yet?</h6>
+                    <input type="password" placeholder="enter password" name="password" style="margin-top:0px;"/><br>
+                    <p id="pesanPassword" class="pesanPass"></p>
+                <div style="margin-top:20px;">
+                    <input id="tombolLogIn" type="submit" name="Log In" value="Log In" class="btn btn-warning">
+                    <h6 style="margin-top:0px;">No Account Yet?</h6>
                     <a href="#" class="alignRightReg"><span id="spanReg" style="color:rgb(17, 116, 177);">Register</span></a>
                 </div>
             </form>
@@ -39,11 +42,6 @@
                 </div>
             </form>
         </div>
-            <!--div class="share" align="center">
-              <a href="#">SHARE</a>
-              <a href="#">FAVORITE</a>
-              <a href="#">READ</a>
-            </div-->
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
