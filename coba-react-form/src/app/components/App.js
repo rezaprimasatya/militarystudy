@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Form from './internal/form'
+import InternalForm from './internal/InternalForm'
 import FormHeader from './FormHeader'
 import './assets/css/form.css'
 
@@ -9,9 +9,9 @@ class App extends Component{
 	}
 	render(){
 		return(
-			<div className="form">
+			<div className="main-form">
 				<FormHeader />
-				<Form />
+				<InternalForm />
 			</div>			
 		)
 	}
