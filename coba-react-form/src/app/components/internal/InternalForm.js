@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import {Form, Container, Dropdown} from 'semantic-ui-react'
 import Location from './LocationAPI'
 import Country from './CountryAPI'
+import CountryCode from './CountryCodeAPI'
 import '../assets/css/InternalForm.css'
 
 class InternalForm extends Component{
@@ -67,7 +68,7 @@ class InternalForm extends Component{
 							fluid 
 							search 
 							selection 
-							options={Country.all()}
+							options={CountryCode.all()}
 							onChange={this.handleCountry}
 							/>	
 							<input type="text" id="mobile" hidden={true} />
@@ -84,7 +85,7 @@ class InternalForm extends Component{
 							fluid 
 							search 
 							selection 
-							options={Country.all()}
+							options={CountryCode.all()}
 							onChange={this.handleCountry}
 							/>	
 							<input type="text" id="mobile" hidden={true} />
