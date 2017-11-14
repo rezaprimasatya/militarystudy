@@ -2,7 +2,7 @@ function check(form)
 {
  if(form.username.value == "dhgevandha@gmail.com" && form.password.value == "123456")
     {
-        window.open('home.html')
+        window.open('home.html');
     }
 
  else if(form.username.value == "" || form.password.value == "")
@@ -47,19 +47,32 @@ function check(form)
     }
 }
 
-/*
-function check(form){
-    var message;
-    message = document.getElementById(message);
-    message.innerHTML="";
-    i = get
-try {
-    if(form.username.value == "gevandha" && form.password.value == "123456") throw window.open('home.html');
-    if(form.username.value == "" && form.password.value == "") throw alert("Fill Password or Username");
-} catch (err) {
-    message.innerHTML="input " + err;
-    function test(message){
 
-    }
+var googleUser = {};
+var takeGoogle = function ()
+{
+        gapi.load('auth2', function()
+        {
+        // Retrieve the singleton for the GoogleAuth library and set up the client.
+        auth2 = gapi.auth2.init(
+            {
+                client_id: '938386259624-qen3kjlhaaktv1pfl18hkrtrr405j18d.apps.googleusercontent.com', //'YOUR_CLIENT_ID.apps.googleusercontent.com',
+                cookiepolicy: 'xRPxzStz8DTbrYhaWyYUmXWv',//'single_host_origin',
+                // Request scopes in addition to 'profile' and 'email'
+                //scope: 'additional_scope'
+            });
+        attachSignin(document.getElementById('googleSignInFunction'));
+        });
 }
-}  */
+
+function attachSignin(element) {
+    console.log(element.id);
+    auth2.attachClickHandler(element, {},
+        function(googleUser) {
+            document.getElementById('name').innerText = "Signed in: " +
+            googleUser.getBasicProfile().getName();
+        }, function(error) {
+          alert(JSON.stringify(error, undefined, 2));
+        });
+}
+takeGoogle();
